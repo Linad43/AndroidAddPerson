@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AndroidBookAdress</string>
+    <string name="openList">Открыть список</string>
+    <string name="addPerson">Добавить в список</string>
+    <string name="exit">Выход из приложения</string>
+    <string name="buttonToMain">В главное меню</string>
+    <string name="enterName">Введите имя</string>
+    <string name="first_name">"Имя: "</string>
+    <string name="save">Сохранить</string>
+    <string name="second_name">Фамилия</string>
+    <string name="enterSecondName">Введите фамилию</string>
+    <string name="adress">Адрес</string>
+    <string name="enterNummPhone">Введите номер телефона</string>
+    <string name="numPhone">Номер телефона</string>
+    <string name="enterAdress">Введите адрес</string>
+</resources>

@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
-    var person: Person? = null
+    private var person: Person? = null
     private var listPerson = arrayListOf<Person>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,11 +50,12 @@ class MainActivity : AppCompatActivity() {
     private val launchSomeActivity = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
+
         if (result.resultCode == RESULT_OK) {
             //val person = intent.extras?.getSerializable(Person::class.java.simpleName) as Person
 
-            person = intent.extras?.getParcelable(Person::class.java.simpleName) as Person?
-            //listPerson.add(person)
+            person = result.data?.getParcelableExtra("Person") as Person?
+            //listPerson.add(person!!)
             Toast.makeText(
                 this,
                 "${person?.firstName}\n" +

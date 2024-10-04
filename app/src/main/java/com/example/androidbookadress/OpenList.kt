@@ -1,5 +1,6 @@
 package com.example.androidbookadress
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -16,6 +17,7 @@ class OpenList : AppCompatActivity() {
     private var adapter: ArrayAdapter<Person>? = null
     private lateinit var listLV:ListView
 
+    @SuppressLint("NewApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -27,6 +29,7 @@ class OpenList : AppCompatActivity() {
         }
 
         listLV = findViewById(R.id.listPerson)
+        listLV.adapter = adapter
         persons = intent.getParcelableArrayListExtra("listPerson", Person::class.java)!!
         adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, persons)
 

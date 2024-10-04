@@ -49,7 +49,7 @@ class AddToList : AppCompatActivity() {
                     "${person.numPhone}",
             Toast.LENGTH_SHORT
         ).show()
-        intent.putExtra(Person::class.java.simpleName, person)
+        intent.putExtra("Person", person)
         setResult(RESULT_OK)
         finish()
     }
